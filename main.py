@@ -2,6 +2,7 @@ import view
 import logic
 import util
 
+
 def main():
     while True:
         size = int(input("input size of list: "))
@@ -11,14 +12,15 @@ def main():
             view.write("invalid data, try again")
     ls = util.create_list(size)
 
-    #rnd_init_list(ls)
-    util.user_init_list(ls)
+    util.rnd_init_list(ls,-50,50)
+    #util.user_init_list(ls)
 
     second = logic.find_second_max_value(ls)
 
-    msg=f"Second max value {second}"
+    msg = f"Second max value {second}"
     view.write(ls)
     view.write(msg)
+
 
 if __name__ == "__main__":
     main()
